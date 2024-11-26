@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelatorioActivity">
+
+    <!-- LinearLayout para centralizar os elementos -->
+    <LinearLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="start"
+        android:layout_marginHorizontal="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Título Relatório de Tarefas centralizado -->
+        <TextView
+            android:id="@+id/tituloRelatorio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Relatório de Tarefas"
+            android:textSize="36sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"/>
+
+        <!-- Título Tarefas Completas alinhado à esquerda -->
+        <TextView
+            android:id="@+id/tituloTarefasCompletas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tarefas Completas"
+            android:textSize="18sp"
+            android:textColor="#509c3b"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="left"/>
+
+        <!-- Lista de Tarefas Completas -->
+        <ListView
+            android:id="@+id/listaTarefasCompletas"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"/>
+
+        <!-- Título Tarefas Incompletas alinhado à esquerda -->
+        <TextView
+            android:id="@+id/tituloTarefasIncompletas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tarefas Incompletas"
+            android:textSize="18sp"
+            android:textColor="#f55151"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="left"/>
+
+        <!-- Lista de Tarefas Incompletas -->
+        <ListView
+            android:id="@+id/listaTarefasIncompletas"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"/>
+
+        <!-- Botão Voltar com fundo branco e texto escuro, bordas arredondadas -->
+        <Button
+            android:id="@+id/botaoVoltarRelatorio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:textColor="#333333"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="sans-serif-medium"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
